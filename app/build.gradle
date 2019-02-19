@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.eiga.app.android.studyflux"
+        applicationId "sobaya.app.studyflux"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -38,6 +38,7 @@ dependencies {
     def nav_version = "1.0.0-beta02"
     implementation "android.arch.navigation:navigation-fragment:$nav_version"
     implementation "android.arch.navigation:navigation-ui:$nav_version"
+
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     def koin_version = '2.0.0-beta-1'
@@ -64,4 +65,12 @@ dependencies {
     def groupie_version = "2.3.0"
     implementation "com.xwray:groupie:$groupie_version"
     implementation "com.xwray:groupie-databinding:$groupie_version"
+
+    def rx_version = "2.2.6"
+    implementation "io.reactivex.rxjava2:rxjava:$rx_version"
+
+    def lifecycle_version = "2.0.0"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

@@ -1,6 +1,6 @@
-package com.eiga.app.android.studyflux.di
+package sobaya.app.studyflux.di
 
-import com.eiga.app.android.studyflux.data.api.CatalogApi
+import sobaya.app.studyflux.data.api.GithubApi
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
@@ -17,7 +17,7 @@ val networkModule = module {
     single { createMoshi() }
     single { createOkHttp() }
     single { createRetrofit(get(), get()) }
-    single<CatalogApi> { createApi(get())}
+    single<GithubApi> { createApi(get())}
 }
 
 fun createMoshi() = Moshi.Builder()
@@ -39,9 +39,9 @@ fun createOkHttp(): OkHttpClient {
 
 fun createRetrofit(okHttpClient: OkHttpClient, moshi: Moshi) = Retrofit.Builder()
         .client(okHttpClient)
-        .baseUrl("https://webservice.recruit.co.jp/carsensor/")
+        .baseUrl("https://api.github.com")
         .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
         .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .build()
 
-fun createApi(retrofit: Retrofit) = retrofit.create(CatalogApi::class.java)
+fun createApi(retrofit: Retrofit) = retrofit.create(GithubApi::class.java)

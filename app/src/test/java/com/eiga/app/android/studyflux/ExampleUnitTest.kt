@@ -1,4 +1,4 @@
-package com.eiga.app.android.studyflux
+package sobaya.app.studyflux
 
 import org.junit.Test
 
