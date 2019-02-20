@@ -1,8 +1,9 @@
 package sobaya.app.studyflux.feature.list
 
 import sobaya.app.studyflux.data.repository.GithubRepository
+import sobaya.app.studyflux.flux.Dispatcher
 
-class ListActionCretor(private val dispatcher: ListDispatcher,
+class ListActionCretor(private val dispatcher: Dispatcher,
                        private val repository: GithubRepository) {
 
     suspend fun listRepo(user: String) {

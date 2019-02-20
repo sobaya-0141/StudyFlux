@@ -4,5 +4,11 @@
             app:startDestination="@id/listFragment">
 
     <fragment android:id="@+id/listFragment" android:name="sobaya.app.studyflux.feature.list.ListFragment"
-              android:label="ListFragment"/>
+              android:label="ListFragment">
+        <action android:id="@+id/action_listFragment_to_groupieFragment" app:destination="@id/groupieFragment"/>
+    </fragment>
+    <fragment android:id="@+id/groupieFragment" android:name="sobaya.app.studyflux.feature.groupie.GroupieFragment"
+              android:label="GroupieFragment">
+        <argument android:name="index" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
 </navigation>

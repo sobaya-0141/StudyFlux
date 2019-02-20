@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'androidx.navigation.safeargs'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -38,6 +40,8 @@ dependencies {
     def nav_version = "1.0.0-beta02"
     implementation "android.arch.navigation:navigation-fragment:$nav_version"
     implementation "android.arch.navigation:navigation-ui:$nav_version"
+    implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
@@ -73,4 +77,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation "androidx.viewpager2:viewpager2:1.0.0-alpha01"
 }
