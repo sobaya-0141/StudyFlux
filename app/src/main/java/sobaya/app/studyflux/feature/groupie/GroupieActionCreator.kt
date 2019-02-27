@@ -1,7 +1,7 @@
 package sobaya.app.studyflux.feature.groupie
 
-import sobaya.app.studyflux.data.repository.GithubRepository
 import sobaya.app.studyflux.flux.Dispatcher
+import sobaya.module.data.repository.GithubRepository
 
 class GroupieActionCreator(private val dispatcher: Dispatcher,
                            private val repository: GithubRepository

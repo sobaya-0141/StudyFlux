@@ -3,13 +3,12 @@ package sobaya.app.studyflux.feature.groupie
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import sobaya.app.common.ext.toLiveData
-import sobaya.app.studyflux.data.api.response.Repo
 import sobaya.app.studyflux.feature.list.ListAction
 import sobaya.app.studyflux.flux.Dispatcher
 
 class GroupieStore(dispatcher: Dispatcher) : ViewModel() {
 
-    val repos: LiveData<List<Repo>?>
+    val repos: LiveData<List<sobaya.module.data.api.response.Repo>?>
     val error: LiveData<String>
 
     init {

@@ -2,7 +2,7 @@ package sobaya.app.studyflux
 
 import android.app.Application
 import sobaya.app.studyflux.di.appModule
-import sobaya.app.studyflux.di.networkModule
+import sobaya.module.data.di.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

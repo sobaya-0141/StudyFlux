@@ -49,7 +49,8 @@ class ListFragment: Fragment() {
         }
 
         GlobalScope.launch {
-            actionCretor.listRepo("sobaya-0141")
+            if ((store.repos.value?.size?: 0) == 0)
+                actionCretor.listRepo("sobaya-0141")
         }
     }
 }

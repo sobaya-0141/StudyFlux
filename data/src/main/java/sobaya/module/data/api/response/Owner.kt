@@ -1,4 +1,4 @@
-package sobaya.app.studyflux.data.api.response
+package sobaya.module.data.api.response
 
 import com.squareup.moshi.Json
 

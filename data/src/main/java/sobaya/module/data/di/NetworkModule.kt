@@ -1,6 +1,5 @@
-package sobaya.app.studyflux.di
+package sobaya.module.data.di
 
-import sobaya.app.studyflux.data.api.GithubApi
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
@@ -11,13 +10,14 @@ import org.koin.android.BuildConfig
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import sobaya.module.data.api.GithubApi
 import java.util.*
 
 val networkModule = module {
     single { createMoshi() }
     single { createOkHttp() }
     single { createRetrofit(get(), get()) }
-    single<GithubApi> { createApi(get())}
+    single<GithubApi> { createApi(get()) }
 }
 
 fun createMoshi() = Moshi.Builder()

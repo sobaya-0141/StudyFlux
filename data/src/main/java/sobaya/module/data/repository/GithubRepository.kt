@@ -1,6 +1,6 @@
-package sobaya.app.studyflux.data.repository
+package sobaya.module.data.repository
 
-import sobaya.app.studyflux.data.api.GithubApi
+import sobaya.module.data.api.GithubApi
 
 class GithubRepository(private val api: GithubApi) {
 

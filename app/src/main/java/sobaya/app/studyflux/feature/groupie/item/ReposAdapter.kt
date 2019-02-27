@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import sobaya.app.studyflux.R
-import sobaya.app.studyflux.data.api.response.Repo
 import sobaya.app.studyflux.databinding.ItemGroupieBinding
 import sobaya.app.studyflux.feature.list.item.RepoItem
 
